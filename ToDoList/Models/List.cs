@@ -10,6 +10,7 @@ namespace ToDoList.Models
     {
         [Key]
         public int ListID { get; set; }
+        [Display(Name ="Name Of List")]
         public string ListTitle { get; set; }
         public DateTime ListCreateDate { get; set; }
 

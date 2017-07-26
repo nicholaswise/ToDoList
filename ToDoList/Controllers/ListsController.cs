@@ -50,6 +50,8 @@ namespace ToDoList.Controllers
         {
             if (ModelState.IsValid)
             {
+                list.ListCreateDate = DateTime.Now;
+
                 db.Lists.Add(list);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -57,6 +59,8 @@ namespace ToDoList.Controllers
 
             return View(list);
         }
+
+        
 
         // GET: Lists/Edit/5
         public ActionResult Edit(int? id)

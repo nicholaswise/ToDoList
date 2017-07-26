@@ -14,6 +14,12 @@ namespace ToDoList.Controllers
     {
         private ToDoListContext db = new ToDoListContext();
 
+        public ActionResult Reminders()
+        {
+            var tasks = db.Tasks.Include(t => t.List);
+            return View(tasks.ToList());
+        }
+
         // GET: Tasks
         public ActionResult Index()
         {

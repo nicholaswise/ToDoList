@@ -1,11 +1,5 @@
 ﻿@model IEnumerable<ToDoList.Models.Task>
 
-@{
-    ViewBag.Title = "Index";
-}
-
-<h2>Index</h2>
-
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -53,8 +47,5 @@
         </td>
     </tr>
 }
+
 </table>
-<h2>Overdue Tasks</h2>
-@{ 
-    Html.RenderPartial("Reminders");
-}
